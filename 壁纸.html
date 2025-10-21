@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python学习壁纸 - 增材制造专属</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .wallpaper {
+            width: 100%;
+            max-width: 1920px;
+            height: 1080px;
+            background: linear-gradient(135deg, #0a1929 0%, #1a3a5f 100%);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* 顶部标题区域 */
+        .header {
+            grid-column: 1 / -1;
+            text-align: center;
+            border-bottom: 2px solid #2a9d8f;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            color: #2a9d8f;
+            text-shadow: 0 0 10px rgba(42, 157, 143, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e9c46a;
+        }
+
+        /* 左右面板布局 */
+        .left-panel, .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* 内容面板样式 */
+        .panel {
+            background: rgba(16, 42, 67, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #2a9d8f;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel-title {
+            color: #e9c46a;
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .panel-title::before {
+            content: "▶";
+            color: #2a9d8f;
+        }
+
+        /* 技能树样式 */
+        .skill-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .skill-level {
+            background: #1e3a5f;
+            padding: 12px 25px;
+            border-radius: 30px;
+            width: 80%;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+            border: 1px solid #2a9d8f;
+        }
+
+        .skill-level:hover {
+            transform: translateX(10px);
+            background: #2a4d7a;
+        }
+
+        .skill-level::after {
+            content: "↓";
+            position: absolute;
+            right: 15px;
+            color: #e9c46a;
+        }
+
+        .skill-level:last-child::after {
+            content: "💰";
+        }
+
+        /* 代码注释样式 */
+        .code-comment {
+            color: #6a9955;
+            font-style: italic;
+            margin: 10px 0;
+            padding-left: 15px;
+            border-left: 2px solid #6a9955;
+        }
+
+        /* 技术重点样式 */
+        .tech-focus {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tech-item {
+            background: rgba(42, 157, 143, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(42, 157, 143, 0.3);
+        }
+
+        .tech-item strong {
+            color: #e9c46a;
+        }
+
+        /* 竞赛策略样式 */
+        .competition-strategy {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .strategy-phase {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phase-year {
+            background: #e76f51;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .phase-desc {
+            flex: 1;
+        }
+
+        /* 行动步骤样式 */
+        .action-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .step {
+            background: rgba(233, 196, 106, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(233, 196, 106, 0.3);
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            background: rgba(233, 196, 106, 0.2);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #e9c46a;
+            color: #1a3a5f;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* 就业方向样式 */
+        .career-path {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .career-item {
+            background: rgba(16, 42, 67, 0.8);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .career-item:hover {
+            background: rgba(42, 157, 143, 0.2);
+        }
+
+        /* 底部信息样式 */
+        .footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(42, 157, 143, 0.3);
+            color: #a8dadc;
+            font-size: 16px;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 1200px) {
+            .wallpaper {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wallpaper">
+        <!-- 顶部标题区域 -->
+        <div class="header">
+            <h1>🐍 Python学习壁纸 · 增材制造专属</h1>
+            <p>联想Y9000P专属 · 技术成长路线图</p>
+        </div>
+
+        <!-- 左侧内容区域 -->
+        <div class="left-panel">
+            <!-- 核心技能树 -->
+            <div class="panel">
+                <div class="panel-title">✨ 核心技能树</div>
+                <div class="skill-tree">
+                    <div class="skill-level">增材制造专业</div>
+                    <div class="skill-level">Python编程核心</div>
+                    <div class="skill-level">爬虫 + 自动化</div>
+                    <div class="skill-level">竞赛项目实战</div>
+                    <div class="skill-level">高薪就业offer</div>
+                </div>
+                <div class="code-comment"># 循序渐进的学习路径，从专业基础到高薪就业</div>
+            </div>
+
+            <!-- 技术重点 -->
+            <div class="panel">
+                <div class="panel-title">🎯 技术重点</div>
+                <div class="tech-focus">
+                    <div class="tech-item">
+                        <strong>生成器 = 懒人工具</strong><br>
+                        yield生产，用时才计算
+                    </div>
+                    <div class="tech-item">
+                        <strong>if __name__ = 智能开关</strong><br>
+                        自己运行✓ 别人导入✗
+                    </div>
+                    <div class="tech-item">
+                        <strong>GitHub = 技术简历</strong><br>
+                        代码仓库+ 作品展示
+                    </div>
+                </div>
+                <div class="code-comment"># 掌握这些核心概念，提升编程效率与代码质量</div>
+            </div>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="right-panel">
+            <!-- 竞赛策略 -->
+            <div class="panel">
+                <div class="panel-title">🚀 竞赛策略</div>
+                <div class="competition-strategy">
+                    <div class="strategy-phase">
+                        <div class="phase-year">大一</div>
+                        <div class="phase-desc">技术储备期</div>
+                    </div>
+                    <div class="strategy-phase">
+                        <div class="phase-year">大二</div>
+                        <div class="phase-desc">竞赛爆发期</div>
+                    </div>
+                    <div class="strategy-phase">
+                        <div class="phase-year">大三</div>
+                        <div class="phase-desc">奖项收割期</div>
+                    </div>
+                    <div class="strategy-phase">
+                        <div class="phase-year">大四</div>
+                        <div class="phase-desc">成果转化期</div>
+                    </div>
+                </div>
+                <div class="code-comment"># 分阶段规划，最大化利用大学时间</div>
+            </div>
+
+            <!-- 立即行动 -->
+            <div class="panel">
+                <div class="panel-title">💡 立即行动</div>
+                <div class="action-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        注册GitHub账号
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        创建学习仓库
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        整理项目笔记
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        锁定目标赛事
+                    </div>
+                </div>
+                <div class="code-comment"># 行动是成功的第一步，现在就开始！</div>
+            </div>
+
+            <!-- 就业方向 -->
+            <div class="panel">
+                <div class="panel-title">💰 就业方向</div>
+                <div class="career-path">
+                    <div class="career-item">量化金融</div>
+                    <div class="career-item">智能制造</div>
+                    <div class="career-item">系统开发</div>
+                    <div class="career-item">数据分析</div>
+                </div>
+                <div class="code-comment"># Python技能在多个高薪领域都有广泛应用</div>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="footer">
+            <p>--- 联想Y9000P专属 · 技术成长路线图 ---</p>
+        </div>
+    </div>
+</body>
+</html>
