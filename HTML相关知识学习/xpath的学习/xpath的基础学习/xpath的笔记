@@ -1,0 +1,24 @@
+Xpath是一门在XML文档中查看信息的语言.Xpath可用来在XML文档中对元素和属性进行遍历.而我们熟知的HTML恰好属于XML的一个子集.
+所以完全可以用xpath去查找html中的内容.
+
+首先,先了解几个概念
+
+
+<book>
+    <id>1</id>
+    <name>野花遍地香</name>
+    <price>1.23</price>
+    <author>
+        <nick>周大强</nick>
+        <nick>周芷若</nick>
+    </author>
+</book>
+
+
+在上述html中
+
+1.book，id，name，price.....都被称为节点.
+2.id，name，price，author被称为book的子节点
+3.book被称为id，name，price，author的父节点
+4.id，name，price，author被称为同胞节点
+
