@@ -1,0 +1,53 @@
+from pyecharts.globals import CurrentConfig, NotebookType
+CurrentConfig.NOTEBOOK_TYPE = NotebookType.JUPYTER_LAB
+
+
+jupyter工具的下载安装
+终端执行安装命令：pip install jupyterlab -i https://mirrors.aliyun.com/pypi/simple/
+安装中文语言包：pip install jupyterlab-language-pack-zh-CN -i https://mirrors.aliyun.com/pypi/simple/
+
+jupyter工具的载体是在浏览器上运行的，建议使用谷歌浏览器，或者是自带的浏览器   不要用 2345浏览器 360浏览器
+
+打开jupyter工具的步骤
+1. 打开终端 输入jupyter lab的命名  回车
+
+2. 终端会自动打开带有浏览器的窗口
+
+3.如果终端没有自动打开浏览器 那么就手动打开
+http://localhost:8888/lab?token=fb13b326e705867d17dd2e0bd7340c095e37bc2f4e133c53
+在终端找到这个url  去浏览器 复制粘贴 进行打开
+
+
+关闭 jupyter工具
+在终端输入 ctrl+c
+
+无法访问此网站
+localhost 拒绝了我们的连接请求。
+证明jupyter功能已经关闭了
+
+pycharm 的python文件后缀 是.py文件
+jupyter 的python文件后缀 是.ipynb文件
+
+
+jupyter工具的注意事项
+         代码是从上到下运行的
+         需要运行每一个单元格（如果单独运行某一个有关联的单元格是会报错的）
+         单元格运行的快捷键 ctrl+enter
+         在pycharm和jupyter中注释的快捷键都是一样的   都是 ctrl+？
+         如果想要有代码的提示  可以输入一部分的代码  摁table键 代码就会自动补全
+
+
+
+在 jupyter工具里面 进行 数据的绘图
+
+pyecharts  绘图模块  可以对数据进行绘图  （柱状图，折线图，饼状图  可以给图像加上颜色）
+pip install 模块名 -i https://mirrors.aliyun.com/pypi/simple/
+
+pip install pyecharts -i https://mirrors.aliyun.com/pypi/simple/
+
+
+
+我们手工进行绘图的时候 需要哪些数据呢？？？？？
+1.要明确数据（行数据是什么   列数据是什么）
+2.要绘制什么样的图形 (柱状图  折线图)
+3.开始绘图 （就是把数据添加到 图形里面）
