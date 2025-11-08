@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{ 
+            width: 200px;
+            height: 100px;
+            border: 2px solid rebeccapurple;
+            /* padding是内部填充 */
+            /* 操作盒子中文文本的位置 */
+            /* 距离左边20px  盒子的大小也会向左移动20px */
+            padding-left: 20px;
+            /* 距离顶部20px */
+            padding-top: 20px;
+            /* 距离底部20px */
+            padding-bottom: 20px;
+            /* 距离右边20px */
+            padding-right: 20px;
+            float: left;
+        }
+        .div2{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            /* margin 调整外部距离 */
+            /* 距离顶部20px */
+            margin-top: 20px;
+            /* 距离左边20px */
+            margin-left: 20px;
+            /* 距离底部20px */
+            margin-bottom: 20px;
+            /* 距离右边20px */
+            margin-right: 20px;
+            /* 盒子的浮动 */
+            float: left;
+        }
+        /* margin 和 padding 的简洁方式 */
+        /* 如果上下的值一样，左右的值一样可以按如下写法 */
+        /* margin 20px(上下) 50px(左右) */
+        /* 如果上下左右四个值都一样 */
+        /* margin 40px(上下左右) */
+        /* 如果四个值都不一样 参数的设置顺序为上右下左 */
+        /* margin 10px(上) 20px(右) 30px(下) 40px(左) */
+    </style>
+</head>
+<body>
+    <div class="div1">
+        调查问卷写一下
+    </div>
+    <div class="div2">
+        调查问卷写一下
+    </div>
+</body>
+</html>

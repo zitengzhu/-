@@ -1,6 +1,6 @@
 from lxml import etree
 
-
+# xpath的位置从一开始数
 
 # 练习为XML
 xml = """

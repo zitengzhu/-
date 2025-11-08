@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    image  图片标签 
+    src    是图片的来源地址
+    width   图片的宽度
+    height  图片的高度
+    总结：不管链接的是本地图片还是外地图片，只要获取图片的地址，就可以了
+    -->
+
+
+    <!-- image  图片标签，可以连接本体图片 -->
+    <img src="C:\Users\Lenovo\Desktop\python学习\19_第十九节课html的学习\img\meinv.jpg" alt="" width="300px" height="200px" >
+    <!-- image  图片标签，也可以链接到外地图片，只要找到图片的url即可 -->
+    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
+
+
+    <!-- a  超链接标签，可以跳转到本地网页和外地网页 -->
+    <!-- 总结：可以点击文本或者图片进行跳转到本地网页和外地网页 -->
+    <!-- 跳转到本地网页，herf是连接的跳转地址 -->
+    <a href="01-HTML的常用标签.html">跳转本地网页</a>
+    <!-- 跳转到外地网页 -->
+    <a href="https://www.baidu.com">百度</a>
+    <!-- 也可以通过点击图片来实现网页的跳转 -->
+    <a href="https://www.baidu.com/"><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt=""></a>
+    
+    <!-- 音频和视频标签需要加上一些参数：控制面板contrs，静音muted，自动播放autoplay -->
+    
+    <!-- 音频标签audio，src内放的是音乐的路径 -->
+    <audio src="C:\Users\Lenovo\Desktop\python学习\python_爬虫\爬虫实战\python_音乐的爬取\音乐\不得了Freestyle.mp3" controls></audio>
+
+    <!-- 视频标签video，可以修改视频的宽度和高度 -->
+    <video src="audio/demo.mp4" controls width="100px" height="100px"  muted  autoplay ></video>
+</body>
+</html>

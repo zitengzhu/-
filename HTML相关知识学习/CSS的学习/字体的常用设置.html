@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 如果要给网页添加样式，那么就必须在style里面添加样式 -->
+     <style>
+        /* 我拿到了p标签，那么我就可以修改p标签中的文字 */
+        p{
+            /* 设置文本颜色 */
+            color: aquamarine;
+            /* 设置字体大小 */
+            font-size:50px;
+            /* 设置字体加粗 */
+            font-weight: bold;
+            /* 对文本的位置进行调整  center居中  right靠右  left靠左 */
+            text-align: center;
+        }
+        /* 可以通过span标签获取标签内的python数据并对其进行修改 */
+        span{
+            color: black;
+            font-weight: bold;
+        }
+        a{
+            color: blueviolet;
+            /* 去除超链接的下划线 */
+            text-decoration: none;
+            /* 设置字体类型 */
+            font-family: '宋体';
+        }
+     </style>
+</head>
+<body>
+    <p>老铁666</p>
+    学习<span>python</span>两年半
+    <!-- a标签的超链接是存在下划线的，可以通过css样式去1修改 -->
+    <a href="https://www.baidu.com">百度</a>
+</body>
+</html>
