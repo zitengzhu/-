@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        函数：
+            系统函数：
+                    将字符串转化为整数形式 number类型 parseInt(要转化字符串)
+                    将字符串转化为小数形式 number类型 parseFloat(要转化字符串)
+                    isNaN()用于检查变量是否为非数字 不是数字类型返回ture 是数字类型返回 false
+        */
+
+        /*
+        自定义函数：
+            js中区分代码逻辑用的是 ; 和 {}
+            定义函数有两种方式：
+                方式一： function 函数名(参数){代码}
+                方式二： 函数名 = function(参数){代码}
+        */
+        // 定义的函数也需要使用 函数名()来调用
+        // 无参函数
+        function test(){console.log('我是第一种写法的无参函数')}
+        test1=function(){console.log("我是第二种写法的无参函数")}
+        test()
+        test1()
+
+        //有参函数
+        function test2(a){console.log('我是第一种写法的有参函数，参数为',a)}
+        test3=function(b){console.log('我是第二种写法的有参函数，参数为',b)}
+        test2(a=12)
+        test3(b=13)
+
+        //有参函数的return返回
+        function test4(d){return b}
+        console.log(test4(d=18))
+    </script>
+</body>
+</html>

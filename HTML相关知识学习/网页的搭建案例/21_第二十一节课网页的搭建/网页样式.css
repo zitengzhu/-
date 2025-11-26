@@ -1,0 +1,168 @@
+/* 顶部格子 */
+.top{
+    /* 设置宽度 */
+    width: 1680px;
+    /* 设置高度 */
+    height: 500px;
+    /* 设置边框样式 */
+    border: 2px solid white;
+    /* 填充图片 */
+    background-image: url(素材/bg.jpg);
+    /* 将图片覆盖div盒子 */
+    background-size: cover;
+}
+/* 导航窗格 */
+nav{
+    /* 设置宽度 */
+    width: 1680px; ;
+    /* 设置高度 */
+    height: 100px;
+    /* 设置背景颜色   第四个参数控制导航窗格的颜色*/
+    background-color:rgba(161, 144, 144, 0.4) ;
+    /* 导航窗下移  距离上部的距离*/
+    margin-top: 150px;
+}
+/* 导航窗格的左侧盒子 */
+.top .left{
+    /* 设置宽度 */
+    width: 300px;
+    /* 设置高度 */
+     height: 100px;
+    /* 设置背景颜色 */
+    background-color: white;
+    /* 字体加粗 */
+    font-weight: bolder;
+    /* 设置字体大小 */
+    font-size:  35px;
+   /* 让文字与行高对齐 */
+   line-height: 80px;
+   /* 设置盒子右侧的消圆 */
+   border-bottom-right-radius: 100px;
+   float: left
+}
+/* 导航窗格的右侧盒子 */
+.top .right{
+    /* 设置宽度 */
+    width: 700px;
+    /* 设置高度 */
+    height: 100px;
+    /* 向右侧移动 */
+    margin-left: 600px;
+    /* 设置颜色 */
+    /* background-color: aqua; */
+    float: left
+}
+/* 设置上部盒子的右侧盒子的字体 */
+.top .right a{
+    /* 设置字体大小 */
+    font-size: 25px;
+    /* 设置字体间隔 */
+    margin-left: 60px;
+    /* 设置字体加粗 */
+    font-weight: bolder;
+    /* 设置字体颜色 */
+    color: black;
+    /* 去除下划线 */
+    text-decoration: none;
+    /* 字体与行高对齐 */
+    line-height: 100px;
+}
+/* 设置上部盒子的右侧盒子的字体鼠标触碰的反馈 */
+.top .right a:hover{
+    color: blue;
+    font-size: 31px
+}
+/* 设置中间的div盒子 */
+.center{
+    /* 设置宽度 */
+    width: 900px;
+    /* 设置高度 */
+    height: 200px;
+    /* 设置背景颜色 */
+    /* background-color: aquamarine; */
+    /* 向左移动 */
+    margin-left: 400px;
+}
+/* 设置中间盒子的上半部分的左侧div盒子 */
+.center .left{
+    /* 设置宽度 */
+    width: 550px;
+    /* 设置高度 */
+    height: 200px;
+    /* 设置背景颜色 */
+    /* background-color: black; */
+    /* 设置字体大小 */
+    font-size: 20px;
+    float: left;
+}
+/* 设置中间盒子的上半部分的右侧盒子 */
+.center .right{
+    /* 设置宽度 */
+    width: 350px;
+    /* 设置高度 */
+    height: 200px;
+    /* background-color: antiquewhite; */
+    float: left;
+    background-image: url(素材/congri.jpg);
+    background-size: cover;
+}
+/* 设置中间盒子的下半部分 */
+.center-bottom{
+    /* 设置宽度 */
+    width: 900px;
+    /* 设置高度 */
+    height: 150px;
+    /* background-color: aqua; */
+    margin-left: 400px;
+    margin-top: 10px;
+}
+/* 设置中间盒子的下半部分的四个小盒子 */
+.center-bottom .bottoms{
+    /* 设置宽度 */
+    width: 200px;
+    /* 设置高度 */
+    height: 150px;
+    /* background-color: black; */
+    float: left;
+    margin-left: 20px;
+    background-image: url(素材/account.png);
+    background-size: cover;
+}
+/* 设置底部div盒子的上半部分的上半部分 */
+.bottom {
+    /* 设置宽度 */
+    width: 900px;
+    /* 设置高度 */
+    height: 400px;
+    background-color:rgb(31, 31, 240,0.4);
+    margin-left: 400px;
+
+}
+/* 设置底部div盒子的上半部分的上半部分的字体 */
+.bottom p{
+    /* 设置字体大小 */
+    font-size: 30px;
+    /* 设置居中 */
+    text-align: center;
+    /* 设置颜色 */
+    color: white;
+}
+/* 设置底部div盒子的上半部分的下半部分 */
+.bottom .a a{
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 150px;
+    color: white;
+}
+.bottom .a a:hover{
+    color: blue;
+}
+/* 设置最底下的版权所有的盒子 */
+.end{
+    /* 设置字体大小 */
+    font-size: 15px;
+    /* 设置字体居中 */
+    text-align: center;
+
+}
+

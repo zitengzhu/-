@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //运算符 + - * / % ++ --
+        var a = 10
+        console.log(a++) //打印这行 代码输出的值为 10 
+        console.log(++a) //打印这行 代码输出的值为 12
+        // 原因： a++ 代表先打印a之后给a的值+1   ++a 代表先给a的值+1再打印a
+        //  12行代码运行时 先打印a 输出a的值为10之后 给a+1 a为11 
+        //  13行代码运行时 先给a的值+1 此时a为12 再打印a 输出a的值为12
+        // a-- 和 --a 同理
+
+        //  判断符 > < <= >= == !=  返回的结果都是布尔值
+        console.log(1=='1') // ture
+        console.log(1==1.0) // ture
+        // 在js中 不同类型的数据了也可由进行比较
+
+
+        //  运算符 && || ！
+        //  js中&&的作用和python中的and的作用相同表示并且
+        //  js中||的作用和python中的or的作用相同表示或者
+        //  js中!的作用和python中的not的作用相同表示不
+        console.log(10>2 && 5<6) //ture
+
+        /*
+        数据的输出
+        alter                   是提示框输出内容
+        console.log             是控制套输出内容
+        document.write          是文档输出内容
+        */
+       document.write('老铁666')
+        //数据的输入  和python中的input方式差不多 调用的函数是prompt() prompt中有两个参数
+        // 第一个参数是 提示语  第二个参数是默认值
+        c = prompt('请输入你爱玩的游戏','共斗之王，怪物猎人世界')
+        // 使用 输出数据的函数可以将 输入的信息打印出来
+        alert(c)
+        document.write(c)
+        console.log(c) 
+
+    </script>
+</body>
+</html>

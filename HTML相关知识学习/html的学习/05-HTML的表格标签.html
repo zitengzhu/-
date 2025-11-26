@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表格的元素名称是title，tr表示行，td表示单元格，th是标题单元格，可以显示文本的加粗 -->
+    <!-- 跨行合并的关键字是rowspan  跨列合并的的关键字是colspan -->
+    <!-- 创建一个六行八列的单元格   border表示边框的宽度   caption代表表格的名称-->
+     <table border="2px">
+        <caption>课程表</caption>
+        <!-- 第一行 -->
+        <tr>
+            <th>上午/下午</td> 
+            <th>周一</td>
+            <th>周二</td>
+            <th>周三</td>
+            <th>周四</td>
+            <th>周五</td>
+            <th>周六</td>
+            <th>周日</td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <!-- 将3个上午进行合并    使用rowspan关键字被合并的数据一定要注释掉或者删除不然数据会向右平移一个单元格-->
+            <td rowspan="3">上午</td> 
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <!-- 将休息进行合并 -->
+            <td rowspan="5" colspan="2">休息</td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+            <!-- <td>上午</td>  -->
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <!-- <td>休息</td>
+            <td>休息</td> -->
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+            <!-- <td>上午</td>  -->
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <!-- <td>休息</td>
+            <td>休息</td> -->
+        </tr>
+        <!-- 第五行 -->
+        <tr>
+            <!-- 将两个下午进行合并  -->
+            <td rowspan="2">下午</td> 
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <!-- <td>休息</td>
+            <td>休息</td> -->
+        </tr>
+        <!-- 第六行 -->
+        <tr>
+            <!-- <td>下午</td>  -->
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <!-- <td>休息</td>
+            <td>休息</td> -->
+        </tr>
+
+     </table>
+
+
+</body>
+</html>

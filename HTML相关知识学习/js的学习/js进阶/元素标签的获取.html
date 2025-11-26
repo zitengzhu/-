@@ -1,0 +1,49 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sp1{
+            color: red;
+        }
+        /* 想通过标签给id属性的标签添加样式需要用#号*/
+        #sp2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div> i like <span class="sp1">python</span></div>
+    <div>i like <span id="sp2">html</span></div>
+    <script>
+        // 想要给元素添加样式的动态效果，我们就需要拿到这个样式的属性
+        
+        // 定位id标签
+        function test(){
+            // 通过id属性获取标签数据 括号内的参数就是id的名称 
+            obj=document.getElementById('sp2')
+            // 打印id属性数据
+            console.log(obj)
+            // 拿到标签信息之后可以修改数据的样式
+            obj.style.color='yellow'
+        }
+        test()
+
+        // 定位class标签
+        function test2(){
+            // 通过class属性获取标签数据
+            obj=document.getElementsByClassName('sp1')
+            // 打印class属性的数据
+            console.log(obj)
+            // 打印之后发现存在length:1则可以使用索引尝试获取标签数据
+            console.log(obj[0])
+            // 尝试之后发现通过索引可以获取到class的标签 
+            // 拿到标签之后可以进行数据样式的更改
+            obj[0].style.color='red'
+        }
+        test2()
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 注：内部书写和外部书写的 js 代码 不能发放到同一个 script标签里面 -->
+    <!-- 内部书写的script标签 -->
+    <script>
+        function test(){alert('我是内部书写')}
+    </script>
+    <!-- 将外部书写的 js文件 和html文件进行关联 -->
+     <script src="外部书写的js代码.js"></script>
+</head>
+<body>
+    <!-- onclick 实在什么什么上进行点击 通过点击被onclick装饰的东西 就会触发里面的js代码  -->
+     <!-- alter 是弹窗的效果 弹窗内的数据 就是括号内的数据 -->
+    <!-- 行内书写 js代码 写在标签中 -->
+    <input type="button" value="行内书写" onclick="javascript:alert('我是行内书写')">
+    <!-- 内部书写js代码 需要写在script标签中  并且onclick的值是函数test()  放鼠标点击时会出发text函数内的代码 -->
+    <input type="button" value="内部书写" onclick="test()">
+    <!-- 外部书写 js代码 需要将js代码放到js文件内 并用src=''进行关联 外部书写和内部书写的onclick书写格式相同 -->
+     <input type="button" value="外部书写" onclick="test1()">
+
+</body>
+</html>

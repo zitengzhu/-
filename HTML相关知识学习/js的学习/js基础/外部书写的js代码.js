@@ -1,0 +1,1 @@
+function test1(){alert('我是外部书写')}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        if条件判断的 js书写格式：
+            单条件    if(条件){代码}
+            两个条件  if(条件){代码} else{代码}
+            多个条件  if(条件){代码} else if(条件){代码} else{代码}
+        */
+        var a=4
+        //单条件
+       function test(){
+        if(a>2){console.log('a的值大于2')}
+       }
+        //    test()
+
+       
+       //两个条件
+       function test1(){
+        if(a>2){console.log('a的值大于2')}else{console.log('a的值小于2')}
+       }
+        //    test1()
+
+        //多个条件
+        function test2(){
+            if(a>2){console.log('a的值大于2')}
+            else if(a<2){console.log('a的值小于2')}
+            else{console.log('a的值等于2')}
+        }
+        //     test2()
+
+
+
+        // for循环 js书写格式 for(变量,判断条件，代码块之后的操作){打印值}
+        for (var i=1;i<4;i++){console.log(i)}
+
+        // 可以使用.length 来获取数据的长度
+        list = ['a','b','c','d']
+        // i 的值 是列表对象的索引，可以通过索引获取对应的数据
+        for(var i=0;i<list.length;i++){console.log(i,list[i])}
+         
+        // while循环 js书写格式 while（条件）{代码块}
+        var c=1
+        while(c<5){console.log(c++)}
+    </script>
+</body>
+</html>

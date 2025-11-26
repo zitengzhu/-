@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+input 是框体的关键字  不同的类型代表不同的含义
+    类型为text      是文本框
+    类型为password  是密码框
+    类型为radio     是单选框    使用radio之后需要加入name来进行关系的绑定  不加入name会导致单选框可以选择多个答案
+    类型为checkbox  是多选框
+    类型为submit    是提交按钮  value是按钮按钮里面的文本内容
+    form是表单的关键字，需要把框体放到form中 action链接的就是跳转的地址  如果不加入form框体那么表单将无法正常提交
+    ----------------------------------------------------------
+    提交完毕发现我提交了很多数据但url只有?sex=on这一项
+    name可以给标签起名字，同一个类型的标签可以用name起一阿姨那个的名字来绑定关系
+    现在提交完毕发现url数据虽然比较完整但?user=aba&pwd=1111&sex=on&hobby=on&hobby=on中一些项的值都是on
+    在这个情况下需要加入value来给数据赋上具体的值
+    ?user=asasas&pwd=asas&sex=man&hobby=fly&hobby=die
+    
+-->
+<body>
+    <form action="02-HTML的基础.html">
+        用户名：<input type="text" name='user'><br>
+        密码：<input type="password" name="pwd"><br>
+        性别：<input type="radio"name='sex' value="man">男  <input type="radio" name="sex" value="woman">女<br>
+        爱好：<input type="checkbox" name="hobby" value="fly">机长起飞 <input type="checkbox" name="hobby" value="die">坠机 <input type="checkbox" name="hobby" value="flytwo">再次起飞<br>
+        <input type="submit"value='确定'>
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 40px;
+            height: 40px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- onmouseover为鼠标滑进盒子时发发生的事件，即运行test()函数 -->
+     <!-- onmouseover为鼠标滑出盒子时发发生的事件，即运行test()函数 -->
+    <div class="div1" onmouseover="test()" onmouseout="test()"></div>
+    <!--定义一个按钮和div盒子，当点击按钮时，div盒子会变色 -->
+   <input type="button" value="按钮" onclick="test()">
+   <script>
+    num=0
+    function test(){
+        // 想要修改的是盒子的属性，则我们需要拿到盒子的标签
+        obj = document.getElementsByClassName('div1')
+        res=obj[0]
+        // 拿到了class的标签数据开始进行样式的修改
+        if(num%3==0){
+            res.style.backgroundColor='red'
+        }
+        else if(num%3==1){
+            res.style.backgroundColor='yellow'
+        }
+        else if(num%3==2){
+            res.style.backgroundColor='green'
+        }
+        num++
+    }
+    //定时触发 只能触发一次 setTimeout 
+    // 有两个参数 第一个参数时执行函数的名称 第二个参数时触发的时间 单位时毫秒 1000毫秒是1秒
+    setTimeout(test,1000)
+    //延迟触发 可以触发多次 setInterval
+    // 有两个参数第一个参数是 执行函数的名称 第二个参数是触发的时间 单位毫秒
+    setInterval(test,1000)
+   </script> 
+   
+</body>
+</html>
